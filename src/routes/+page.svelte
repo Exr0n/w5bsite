@@ -1,6 +1,6 @@
 <script>
     import { LinkedinSolid, GithubSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
-    import OrcidIcon from '$lib/icons/ORCID-iD_icon_BW_vector.svelte'
+    import OrcidIcon from '$lib/icons/ORCID_icon_cutout.svelte'
     import FaGraduationCap from '$lib/icons/fa-graduation-cap.svelte';
 </script>
   
