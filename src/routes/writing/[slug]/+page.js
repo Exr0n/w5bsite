@@ -4,15 +4,15 @@ import { error } from '@sveltejs/kit'
 export async function load({ params }) {
 	try {
 		const post = await import(`$lib/writing/${params.slug}.md`);
-		// const post = await import(`../../../lib/writing/gestalt-perfectionism.md`);
-		// const post = await import("$lib/writing/gestalt-perfectionism.md");
-		console.log(post)
 
-		console.log("meta", post.metadata)
+		const content = (await import(`$lib/writing/${params.slug}.md?raw`)).default;
+		const words = (content.match(/\w\s\w/g) || []).length;
+		const time = words / 250; // read at 230-260 wpm
 
 		return {
 			content: post.default,
-			meta: post.metadata
+			meta: post.metadata,
+			duration: time,
 		}
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`)

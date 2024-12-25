@@ -2,6 +2,7 @@
 	// import { formatDate } from '$lib/utils'
 
 	let { data } = $props()
+    const { meta, duration } = data;
 </script>
 
 <svelte:head>
@@ -12,9 +13,8 @@
 
 <article>
 	<hgroup>
-		<h1>{data.meta.title}</h1>
-		<!-- <p>Published at {formatDate(data.meta.date)}</p> -->
-		<p>Published at {data.meta.date}</p>
+        <h3 class="text-2xl font-sans group-hover:text-accent transition-all duration-200">{meta.title}</h3>
+        <p class="font-light text-sm font-sans">{meta.date} &nbsp;&middot;&nbsp; {Math.round(duration)} min read</p>
 	</hgroup>
 
 	<div class="tags">
@@ -23,7 +23,7 @@
 		{/each}
 	</div>
 
-	<div class="prose">
+	<div class="prose mt-8 pb-36">
 		<data.content />
 	</div>
 </article>
