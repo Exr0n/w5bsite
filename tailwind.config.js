@@ -11,9 +11,9 @@ export default {
         'sans': ['Barlow', 'ui-sans-serif', 'system-sans-serif']
       },
       colors: {
-        'accent': '#326ccc',
-        'fg': '#07090d',
-        'bg': '#fffffc'
+        accent: 'rgb(var(--color-accent))',
+        fg: 'rgb(var(--color-fg))',
+        bg: 'rgb(var(--color-bg))',
       }
     }
   },

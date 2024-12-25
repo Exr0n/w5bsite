@@ -2,10 +2,22 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
-    --accent: #326ccc;
-    --white: rgb(250, 250, 247);
-    --black: rgb(110, 10, 10);
+
+@layer base {
+
+    :root {
+      --color-accent: 50 108 204;
+      --color-fg: 7 9 13;
+      --color-bg: 255 255 253;
+    }
+  
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --color-accent: 99 158 255;
+            --color-fg: 239 239 235;
+            --color-bg: 24 27 33;
+        }
+    }
 }
 
 *::selection {
@@ -15,12 +27,13 @@
 }
 
 a {
+    color: rgb(var(--color-fg));
     font-weight: normal !important;
     text-decoration: underline;
     transition-property: color;
     transition-duration: 100ms;
 }
 a:hover {
-    color: #326ccc;
+    color: rgb(var(--color-accent));
 }
 

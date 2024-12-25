@@ -24,7 +24,7 @@
 		{/each}
 	</div>
 
-	<div class="prose mt-8 pb-36">
+	<div class="prose dark:prose-invert mt-8 pb-36 text-fg">
 		<data.content />
 	</div>
 </article>
@@ -40,7 +40,6 @@
 
 		h1 + p {
 			margin-top: var(--size-2);
-			color: var(--text-2);
 		}
 
 		.tags {

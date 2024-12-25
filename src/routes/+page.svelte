@@ -28,7 +28,7 @@
     <!-- svelte-ignore a11y_img_redundant_alt -->
     <img src="pic.png" alt="profile picture" class="w-1/4 mx-auto md:mx-0" />
     <div class="flex flex-col w-min self-center md:self-end justify-end space-y-2 md:space-y-4">
-        <p class='text-5xl min-w-max font-sans font-bold selection:text-accent selection:bg-transparent'>Albert Y. Huang</p>
+        <p class='text-5xl min-w-max font-sans font-bold selection:text-[#326ccc] selection:bg-transparent'>Albert Y. Huang</p>
         <div class="w-full flex justify-left space-x-2 group [&>a]:transition-opacity">
             <p class="font-sans "><Exr0nIcon /> Exr0n</p>
             <Sep type="|" />
