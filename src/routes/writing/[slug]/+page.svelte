@@ -14,7 +14,7 @@
 
 <article>
 	<hgroup>
-        <p><Exr0nLink /> &rsaquo; <a href="/writing" class="no-underline">writing</a> </p>
+        <p><Exr0nLink /><Sep type=">" /><a href="/writing" class="no-underline">writing</a> </p>
         <h3 class="text-2xl font-sans group-hover:text-accent transition-all duration-200">{meta.title}</h3>
         <p class="font-light text-sm font-sans">{meta.date}<Sep />{Math.round(duration)} min read</p>
 	</hgroup>

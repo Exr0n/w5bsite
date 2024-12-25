@@ -3,4 +3,4 @@
     if (type == '.') type = "·";
     if (type == '>') type = "›";
 </script>
-<span class="select-none">&nbsp;{type}&nbsp;</span>
+<span class="select-none font-sans">&nbsp;{type}&nbsp;</span>
