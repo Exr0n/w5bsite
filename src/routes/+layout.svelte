@@ -9,7 +9,7 @@
 
 <div class="w-full h-full min-h-screen font-serif text-fg bg-bg selection:text-bg selection:bg-fg">
 
-<div class="max-w-prose mx-auto pt-16 ">
+<div class="max-w-prose mx-auto pt-16 px-6">
 	{@render children()}
 </div>
 </div>
