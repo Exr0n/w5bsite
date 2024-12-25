@@ -5,7 +5,12 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        'serif': ['Lora', 'ui-serif', 'system-serif'],
+        'sans': ['Barlow', 'ui-sans-serif', 'system-sans-serif']
+      }
+    }
   },
 
   plugins: [typography]
