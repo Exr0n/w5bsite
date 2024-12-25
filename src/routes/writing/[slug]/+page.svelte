@@ -1,5 +1,6 @@
 <script lang="ts">
     import Exr0nLink from "$lib/components/exr0n-link.svelte";
+    import Sep from "$lib/components/sep.svelte";
 
 	let { data } = $props()
     const { meta, duration } = data;
@@ -15,7 +16,7 @@
 	<hgroup>
         <p><Exr0nLink /> &rsaquo; <a href="/writing" class="no-underline">writing</a> </p>
         <h3 class="text-2xl font-sans group-hover:text-accent transition-all duration-200">{meta.title}</h3>
-        <p class="font-light text-sm font-sans">{meta.date} &nbsp;&middot;&nbsp; {Math.round(duration)} min read</p>
+        <p class="font-light text-sm font-sans">{meta.date}<Sep />{Math.round(duration)} min read</p>
 	</hgroup>
 
 	<div class="tags">

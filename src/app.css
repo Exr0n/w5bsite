@@ -13,7 +13,7 @@
   
     @media (prefers-color-scheme: dark) {
         :root {
-            --color-accent: 99 158 255;
+            --color-accent: 67 138 250;
             --color-fg: 239 239 235;
             --color-bg: 24 27 33;
         }
