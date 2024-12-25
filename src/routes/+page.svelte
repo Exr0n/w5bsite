@@ -11,6 +11,8 @@
     <div class="flex flex-col justify-end space-y-4">
         <p class='text-5xl font-sans font-bold'>Albert Y. Huang</p>
         <div class="w-full flex justify-left space-x-2 group [&>a]:transition-opacity">
+            <p class="font-sans">@Exr0n</p>
+            <span>|</span>
             <a href="mailto:hi@exr0n.com" class="w-6"><EnvelopeSolid /></a>
             <a href="https://github.com/exr0n" class="w-6"><GithubSolid /></a>
             <a href={GOOGLE_SCHOLAR_LINK} class="w-6 translate-y-[0.13rem]"><FaGraduationCap /></a>
@@ -23,11 +25,11 @@
     I work to help people see deeper and do more by interfacing with the brain. 
 </p>
 <div class="w-full flex justify-center space-x-2 font-sans">
-    <a href="/projects">projects</a>
+    <a href="/projects">projects</a> <!-- todo: make projects page -->
     <span>&middot;</span>
-    <a href={GOOGLE_SCHOLAR_LINK}>publications</a>
+    <a href={GOOGLE_SCHOLAR_LINK}>publications</a>  <!-- todo: someday make a research interests page -->
     <span>&middot;</span>
-    <a href="/writing">writing</a>
+    <a href="/writing">writing</a> 
     <span>&middot;</span>
     <a href="https://wilderness.exr0n.com">more</a>
 </div>

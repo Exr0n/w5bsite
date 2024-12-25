@@ -1,3 +1,0 @@
-<div>
-    research page.
-</div>  
