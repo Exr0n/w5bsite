@@ -28,3 +28,5 @@ export async function GET({ params, setHeaders, url }) {
     headers: { Location: url.pathname.replace(/^\/wildernessfile/, '/wilderness') }
   });
 }
+
+export const prerender = true;
