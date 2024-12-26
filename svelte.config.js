@@ -43,7 +43,8 @@ function getWildernesFiles(dir) {
 }
 
 const wildernesFiles = getWildernesFiles('static/wilderness');
-console.log(wildernesFiles)
+console.log('writings md files', mdFiles)
+console.log('wilderness files', wildernesFiles)
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
