@@ -33,7 +33,8 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
 			pages: "build",
-			assets: "build"
+			assets: "build",
+			strict: false,
 		}),
 		prerender: {
 			// pre-render slug blog pages, from https://stackoverflow.com/a/78493635
