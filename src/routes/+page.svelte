@@ -27,10 +27,10 @@
 <div class="flex flex-col lg:flex-row justify-center lg:space-x-8"> 
     <!-- svelte-ignore a11y_img_redundant_alt -->
     <img src="pic.png" alt="profile picture" class="w-1/4 mx-auto lg:mx-0" />
-    <div class="flex flex-col w-min self-center lg:self-end justify-end space-y-2 lg:space-y-4">
+    <div class="flex flex-col lg:w-min self-center lg:self-end justify-end space-y-2 lg:space-y-4">
         <p class='text-5xl min-w-max font-sans font-bold selection:text-[#326ccc] selection:bg-transparent'>Albert Y. Huang</p>
         <div class="w-full flex justify-left space-x-2 group [&>a]:transition-opacity">
-            <p class="font-sans "><Exr0nIcon /> Exr0n</p>
+            <p class="font-sans min-w-max"><Exr0nIcon /> Exr0n</p>
             <Sep type="|" />
             {#each ICONS as [Icon, url]}
             <a href={url} class="w-6"><Icon /></a>
