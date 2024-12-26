@@ -28,6 +28,7 @@ const mdFiles = fs
 
 function getWildernesFiles(dir) {
 	const entries = fs.readdirSync(dir, { withFileTypes: true });
+	console.log("processing wilderness", dir, entries)
 	let files = [];
 
 	for (const entry of entries) {
