@@ -1,7 +1,7 @@
 ---
 title: "An Alternative Happiness"
 date: "2024-12-23"
-description: "Overview of gestalt perfectionism, an alternative happiness or goal in life."
+description: "If you don't trust pleasure, try greater gestalts."
 tags:
     - philosophy
 ---
