@@ -54,6 +54,7 @@ const config = {
 		adapter: adapter({
 			pages: "build",
 			assets: "build",
+			strict: false,
 		}),
 		prerender: {
 			// pre-render slug blog pages, from https://stackoverflow.com/a/78493635
