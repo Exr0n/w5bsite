@@ -2,6 +2,7 @@ import { mdsvex } from "mdsvex";
 import adapter from '@sveltejs/adapter-static';
 
 import fs from 'fs';
+import path from 'path';
 
 // mdsvex config from https://joyofcode.xyz/sveltekit-markdown-blog#posts-api-endpoint
 /** @type {import('mdsvex').MdsvexOptions} */
@@ -25,6 +26,25 @@ const mdFiles = fs
   .filter((file) => file.endsWith('.md'))
   .map((file) => `/writing/${file.replace('.md', '')}`);
 
+function getWildernesFiles(dir) {
+	const entries = fs.readdirSync(dir, { withFileTypes: true });
+	let files = [];
+
+	for (const entry of entries) {
+		const fullPath = path.join(dir, entry.name);
+		if (entry.isDirectory()) {
+			files = files.concat(getWildernesFiles(fullPath));
+		} else if (entry.isFile()) {
+			files.push(path.join('/wildernessfile/', entry.parentPath.replace(/^static\/wilderness/, ''), entry.name))
+		}
+	}
+
+	return files;
+}
+
+const wildernesFiles = getWildernesFiles('static/wilderness');
+console.log(wildernesFiles)
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     kit: {
@@ -39,7 +59,7 @@ const config = {
 		prerender: {
 			// pre-render slug blog pages, from https://stackoverflow.com/a/78493635
 			crawl: true,
-			entries: ['/', ...mdFiles],
+			entries: ['/', ...mdFiles, ...wildernesFiles],
 		}
 	},
 
