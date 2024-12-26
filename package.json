@@ -22,6 +22,7 @@
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@tailwindcss/typography": "^0.5.15",
 		"flowbite-svelte-icons": "^2.0.2",
+		"mime-types": "^2.1.35",
 		"svelte-fa": "^4.0.3"
 	}
 }

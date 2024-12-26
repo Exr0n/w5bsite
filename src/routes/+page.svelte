@@ -51,5 +51,5 @@
     <Sep />
     <a href="/writing">writing</a> 
     <Sep />
-    <a href="https://wilderness.exr0n.com">more</a>
+    <a href="/wilderness">more</a>
 </div>

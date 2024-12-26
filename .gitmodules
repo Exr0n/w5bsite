@@ -1,0 +1,3 @@
+[submodule "static/wilderness"]
+	path = static/wilderness
+	url = git@github.com:Exr0n/wilderness.git
