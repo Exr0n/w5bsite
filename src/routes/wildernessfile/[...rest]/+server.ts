@@ -29,4 +29,4 @@ export async function GET({ params, setHeaders, url }) {
   });
 }
 
-export const prerender = false;
+export const prerender = true;

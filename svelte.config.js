@@ -28,7 +28,7 @@ const mdFiles = fs
 
 function getWildernesFiles(dir) {
 	const entries = fs.readdirSync(dir, { withFileTypes: true });
-	console.log("processing wilderness", dir, entries)
+	// console.log("processing wilderness", dir, entries)
 	let files = [];
 
 	for (const entry of entries) {
@@ -56,12 +56,13 @@ const config = {
 		adapter: adapter({
 			pages: "build",
 			assets: "build",
-			strict: false,
+			// strict: false,
 		}),
 		prerender: {
 			// pre-render slug blog pages, from https://stackoverflow.com/a/78493635
 			crawl: true,
 			entries: ['/', ...mdFiles, ...wildernesFiles],
+			entries: ['/', ...mdFiles],
 		}
 	},
 
