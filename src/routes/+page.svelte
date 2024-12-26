@@ -42,7 +42,7 @@
     </div>
 </div>
 <p class='p-4 justify-center text-center'>
-    I work to help people see deeper and do more by interfacing with the brain. 
+    I work on learning a ton, and on brain machine interfaces. 
 </p>
 <div class="w-full flex justify-center space-x-2 font-sans">
     <a href="/projects">projects</a> <!-- todo: make projects page -->
