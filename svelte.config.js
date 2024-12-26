@@ -26,26 +26,26 @@ const mdFiles = fs
   .filter((file) => file.endsWith('.md'))
   .map((file) => `/writing/${file.replace('.md', '')}`);
 
-function getWildernesFiles(dir) {
-	const entries = fs.readdirSync(dir, { withFileTypes: true });
-	// console.log("processing wilderness", dir, entries)
-	let files = [];
+// function getWildernesFiles(dir) {
+// 	const entries = fs.readdirSync(dir, { withFileTypes: true });
+// 	// console.log("processing wilderness", dir, entries)
+// 	let files = [];
 
-	for (const entry of entries) {
-		const fullPath = path.join(dir, entry.name);
-		if (entry.isDirectory()) {
-			files = files.concat(getWildernesFiles(fullPath));
-		} else if (entry.isFile()) {
-			files.push(path.join('/wildernessfile/', entry.parentPath.replace(/^static\/wilderness/, ''), entry.name))
-		}
-	}
+// 	for (const entry of entries) {
+// 		const fullPath = path.join(dir, entry.name);
+// 		if (entry.isDirectory()) {
+// 			files = files.concat(getWildernesFiles(fullPath));
+// 		} else if (entry.isFile()) {
+// 			files.push(path.join('/wildernessfile/', entry.parentPath.replace(/^static\/wilderness/, ''), entry.name))
+// 		}
+// 	}
 
-	return files;
-}
+// 	return files;
+// }
 
-const wildernesFiles = getWildernesFiles('static/wilderness');
-console.log('writings md files', mdFiles)
-console.log('wilderness files', wildernesFiles)
+// const wildernesFiles = getWildernesFiles('static/wilderness');
+// console.log('writings md files', mdFiles)
+// console.log('wilderness files', wildernesFiles)
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -61,7 +61,7 @@ const config = {
 		prerender: {
 			// pre-render slug blog pages, from https://stackoverflow.com/a/78493635
 			crawl: true,
-			entries: ['/', ...mdFiles, ...wildernesFiles],
+			// entries: ['/', ...mdFiles, ...wildernesFiles],
 			entries: ['/', ...mdFiles],
 		}
 	},
