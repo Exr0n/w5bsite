@@ -5,7 +5,6 @@ import mime from 'mime-types';
 import { error } from '@sveltejs/kit';
 
 export async function GET({ params, setHeaders, url }) {
-  console.log("got request in server", url);
   const baseDir = path.join(process.cwd(), 'static', 'wilderness');
   const targetPath = path.join(baseDir, params.rest ?? "");
 

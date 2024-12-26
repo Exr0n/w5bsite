@@ -3,12 +3,8 @@
     import Sep from '$lib/components/sep.svelte';
     const { data } = $props();
     const { posts, durations } = data;
-    // console.log(data)
 
     const zip = (a, b) => a.map((k, i) => [k, b[i]]);
-    
-    // let { posts, durations } = $props();
-    // console.log(posts)
 </script>
 <div class="flex flex-col space-y-8">
     <h1 class="text-2xl"><Exr0nIcon /><Sep type=">" />writing</h1>
