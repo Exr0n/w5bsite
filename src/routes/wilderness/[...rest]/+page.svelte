@@ -1,4 +1,4 @@
-<!-- from openai o1 -->
+<!-- /src/routes/wilderness/[...rest]/+page.svelte -->
 <script>
     export let data;
     import { page } from '$app/stores'
