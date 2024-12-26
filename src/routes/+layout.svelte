@@ -9,6 +9,7 @@
 
 <svelte:head>
 	<title>Albert @Exr0n</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </svelte:head>
 
 <div class="w-full h-full min-h-screen font-serif text-fg bg-bg selection:text-bg selection:bg-fg">
