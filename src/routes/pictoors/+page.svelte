@@ -3,17 +3,18 @@
     import Pic from './Pic.svelte';
     const { data } = $props();
 
-    const paths = Object.keys(data.paths);
+    const paths = data.paths;
+    const SPACING = 12
 </script>
 
-<div class="flex w-[100vw] space-x-8 p-8 px-72 min-h-[100vh] left-0 top-0 absolute bg-bg">
-    <div class="flex flex-col space-y-8 w-1/2">
-        <Breadcrumbs label="pictures" />
+<div class={`flex w-[100vw] space-x-${SPACING} p-${SPACING} px-72 min-h-[100vh] left-0 top-0 absolute bg-bg`}>
+    <div class={`flex flex-col space-y-${SPACING} w-1/2`}>
+        <Breadcrumbs label="pictoors" />
         {#each paths.filter((_, i) => i % 2) as path}
         <Pic path={path} />
         {/each}
     </div>
-    <div class="flex flex-col space-y-8 w-1/2">
+    <div class={`flex flex-col space-y-${SPACING} w-1/2`}>
         {#each paths.filter((_, i) => !(i % 2)) as path}
         <Pic path={path} />
         {/each}
