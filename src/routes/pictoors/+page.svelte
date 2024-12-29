@@ -20,9 +20,15 @@
     let open_pic = $state(null);
     let open_meta = $derived(open_pic !== null ? pics[open_pic][1] : null);
     let open_is_wide = $derived(nat_widths[open_pic] > nat_heights[open_pic]);
+
+    const key_handler = (ev) => {
+        if (ev.key == 'Escape') open_pic = null;
+        if (ev.key == 'ArrowRight' || ev.key == 'ArrowDown' || ev.key == 'j') open_pic = (open_pic + 1) % pics.length;
+        if (ev.key == 'ArrowLeft' || ev.key == 'ArrowUp' || ev.key == ' ' || ev.key == 'k') open_pic = (open_pic - 1 + pics.length) % pics.length;
+    }
 </script>
 <div class="hidden p-12 space-x-12 space-y-12 sm:flex-row lg:flex-row xl:flex-row"></div>   <!-- force tailwind to compile all needed classes -->
-<svelte:window bind:innerWidth onkeyup={(ev) => { if (ev.key == 'Escape') open_pic = null; }} />
+<svelte:window bind:innerWidth onkeyup={key_handler} />
 
 <div class={`flex w-[100vw] space-x-${PHOTO_SPACING} p-${PHOTO_SPACING} sm:px-24 md:px-48 lg:px-72 min-h-[100vh] left-0 top-0 absolute bg-bg`}>
     <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
