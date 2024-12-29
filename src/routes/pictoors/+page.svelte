@@ -49,10 +49,10 @@
     tabindex="-1"
 >
     <img src={pics[open_pic][0]} class="object-contain max-w-full max-h-full shadow-lg" alt={open_meta.cap}/>
-    <div class="flex-col md:flex-row lg:flex-col font-sans p-4 self-end min-w-max min-h-max">
-        <p>{open_meta.cap}</p>
-        <p class="text-sm"><MapPinAltSolid class="w-3 inline-block -translate-y-[0.1em]" />&nbsp;{open_meta.loc}</p>
-        <p class="text-sm">{formatDate(new Date(Date.parse(open_meta.time)))}</p>
+    <div class="flex-col md:flex-row lg:flex-col font-sans p-2 self-end min-w-max min-h-max">
+        <span class="px-2">{open_meta.cap}</span>
+        <span class="px-2 text-sm block sm:inline-block lg:block"><MapPinAltSolid class="w-3 inline-block -translate-y-[0.1em]" />&nbsp;{open_meta.loc}</span>
+        <span class="pl-2 text-sm block sm:inline-block lg:block">{formatDate(new Date(Date.parse(open_meta.time)))}</span>
     </div>
 </div>
 {/if}
