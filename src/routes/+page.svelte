@@ -49,6 +49,8 @@
     <Sep />
     <a href={GOOGLE_SCHOLAR_LINK}>publications</a>  <!-- todo: someday make a research interests page -->
     <Sep />
+    <a href="/pictoors">pictoors</a> 
+    <Sep />
     <a href="/writing">writing</a> 
     <Sep />
     <a href="/wilderness">more</a>

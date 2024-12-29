@@ -1,0 +1,109 @@
+{
+    "IMG_0122.jpeg": {
+        "loc": "Joshua Tree National Park",
+        "cap": "Desert sunrise",
+        "time": "2024-10-26T06:46:00",
+        "tags": ["landscape"]
+    },
+    "IMG_0500.jpeg": {
+        "loc": "Running Springs, CA (Pasadena - Big Bear)",
+        "cap": "Burned forest",
+        "time": "2024-11-27T08:19:00",
+        "tags": ["landscape"]
+    },
+    "IMG_0542.jpeg": {
+        "loc": "Black Diamond Mines Regional Preserve",
+        "cap": "Friends wandering",
+        "tags": ["portrait"]
+    },
+    "IMG_0547.jpeg": {
+        "loc": "Black Diamond Mines Regional Preserve",
+        "cap": "Looking back",
+        "time": "2024-11-29T17:50:00",
+        "tags": ["portrait"]
+    },
+    "IMG_0617.jpeg": {
+        "loc": "Big Horn Mine",
+        "cap": "New moles",
+        "time": "2023-10-14T15:57:00",
+        "tags": ["portrait"]
+    },
+    "IMG_0782.jpeg": {
+        "loc": "Sawyer Camp Trail",
+        "cap": "Rainy night walk",
+        "time": "2024-12-26T22:42:00",
+        "tags": ["portrait"]
+    },
+    "IMG_0803.jpeg": {
+        "loc": "Sawyer Camp Trail",
+        "cap": "They wanted to try flash",
+        "time": "2024-12-26T23:07:00",
+        "tags": ["portrait"]
+    },
+    "IMG_1407.jpeg": {
+        "loc": "Lake Dolores Waterpark",
+        "cap": "Freeskate everywhere",
+        "time": "2023-11-25T17:07:00",
+        "tags": ["object"]
+    },
+    "IMG_2516.jpeg": {
+        "loc": "Cambridge, MA",
+        "cap": "Art finds a way",
+        "time": "2024-01-13T22:42:00",
+        "tags": ["portrait"]
+    },
+    "IMG_3352.jpeg": {
+        "loc": "Pier 55, Seattle, WA",
+        "cap": "Red nights",
+        "time": "2023-03-26T21:08:00",
+        "tags": ["portrait"]
+    },
+    "IMG_3414.jpeg": {
+        "loc": "Stanford, CA",
+        "cap": "To fog",
+        "time": "2023-12-13T01:23:00",
+        "tags": ["portrait"]
+    },
+    "IMG_4663.jpeg": {
+        "loc": "Charlestown, MA",
+        "cap": "Digital nomad",
+        "time": "2024-07-24T19:36:00",
+        "tags": ["portrait"]
+    },
+    "IMG_5542.jpeg": {
+        "loc": "The Nueva School",
+        "cap": "Travel",
+        "time": "2023-05-17T13:31:00",
+        "tags": ["portrait"]
+    },
+    "IMG_5573.jpeg": {
+        "loc": "Goblin Valley, UT",
+        "cap": "Goblin valley",
+        "time": "2024-09-04T07:24:00",
+        "tags": ["landscape"]
+    },
+    "IMG_5593.jpeg": {
+        "loc": "Owens Valley Radio Observatory",
+        "cap": "Listen",
+        "time": "2024-01-05T22:25:00",
+        "tags": ["object"]
+    },
+    "IMG_6208.jpeg": {
+        "loc": "Oostzaan, Netherlands",
+        "cap": "Locomotion in flatland",
+        "time": "2023-05-24T12:12:00",
+        "tags": ["landscape"]
+    },
+    "IMG_1542.jpeg": {
+        "loc": "Shells Dirt Jumps, Foster City, CA",
+        "cap": "Outside the city",
+        "time": "2022-12-26T23:10:00",
+        "tags": ["portrait"]
+    },
+    "IMG_9013.jpeg": {
+        "loc": "Arches National Park",
+        "cap": "Mountain home",
+        "time": "2023-08-06T08:12:00",
+        "tags": ["portrait"]
+    }
+}

@@ -20,6 +20,7 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/enhanced-img": "^0.4.4",
 		"@tailwindcss/typography": "^0.5.15",
 		"flowbite-svelte-icons": "^2.0.2",
 		"mime-types": "^2.1.35",
