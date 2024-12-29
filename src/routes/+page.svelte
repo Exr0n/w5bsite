@@ -15,6 +15,8 @@
         [FaOrcid, "https://orcid.org/0000-0003-1268-4780"],
         [UsersSolid, "/friends"]
     ]
+
+    let show_more = $state(false);
 </script>
 <style>
     a:hover { 
@@ -45,13 +47,18 @@
     I work on learning a ton, and on brain machine interfaces. 
 </p>
 <div class="w-full flex justify-center space-x-2 font-sans">
-    <a href="/projects">projects</a> <!-- todo: make projects page -->
-    <Sep />
-    <a href={GOOGLE_SCHOLAR_LINK}>publications</a>  <!-- todo: someday make a research interests page -->
-    <Sep />
-    <a href="/pictoors">pictoors</a> 
-    <Sep />
-    <a href="/writing">writing</a> 
-    <Sep />
-    <a href="/wilderness">more</a>
+    <div class="max-w-max relative">
+        <a href="/projects">projects</a> <!-- todo: make projects page -->
+        <Sep />
+        <a href={GOOGLE_SCHOLAR_LINK}>publications</a>  <!-- todo: someday make a research interests page -->
+        <Sep />
+        <a onclick={() => { show_more = true; }} role="button">more</a>
+        {#if show_more}
+        <div class="absolute flex flex-col right-0 top-6 text-right">
+            <a class="animate-in animate-in-from-top-1 fill-mode-both fade-in" href="/pictoors">pictoors</a> 
+            <a class="animate-in animate-in-from-top-1 fill-mode-both delay-[50ms] fade-in" href="/writing">writing</a> 
+            <a class="animate-in animate-in-from-top-1 fill-mode-both delay-[100ms] fade-in" href="/wilderness">wild</a>
+        </div>
+        {/if}
+    </div>
 </div>

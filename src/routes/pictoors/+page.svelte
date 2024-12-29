@@ -43,7 +43,7 @@
 </div>
 {#if open_pic !== null}
 <div
-    class={`fixed w-full h-full top-0 left-0 p-4 m-0 animate-in backdrop-blur contain-content fade-in fade-out bg-black bg-opacity-80 flex flex-col ${open_is_wide ? "xl" : "sm"}:flex-row items-center justify-center`}
+    class={`fixed w-full h-full top-0 left-0 p-4 m-0 animate-in fade-in  bg-black bg-opacity-80 backdrop-blur contain-content flex flex-col ${open_is_wide ? "xl" : "sm"}:flex-row items-center justify-center`}
     onclick={() => { open_pic = null; }}
     onkeyup={(ev) => { if (ev.key == 'Escape') open_pic = null; }} 
     role="button"
@@ -55,11 +55,5 @@
         <span class="px-2 text-sm block ${open_is_wide ? "xl" : "sm"}:block"><MapPinAltSolid class="w-3 inline-block -translate-y-[0.1em]" />&nbsp;{open_meta.loc}</span>
         <span class="pl-2 text-sm block  ${open_is_wide ? "xl" : "sm"}:block">{formatDate(new Date(Date.parse(open_meta.time)))}</span>
     </div>
-    <!-- <img src={pics[open_pic][0]} class="object-contain max-w-full max-h-full shadow-lg" alt={open_meta.cap}/>
-    <div class="flex-col ${open_is_wide ? "md" : "xs"}:flex-row ${open_is_wide ? "lg": "md"}:flex-col font-sans p-2 self-end min-w-max min-h-max">
-        <span class="px-2">{open_meta.cap}</span>
-        <span class="px-2 text-sm block ${open_is_wide ? "xs": "md"}:inline-block ${open_is_wide ? "lg" : "md"}:block"><MapPinAltSolid class="w-3 inline-block -translate-y-[0.1em]" />&nbsp;{open_meta.loc}</span>
-        <span class="pl-2 text-sm block ${open_is_wide ? "xs": "md"}:inline-block ${open_is_wide ? "lg" : "md"}:block">{formatDate(new Date(Date.parse(open_meta.time)))}</span>
-    </div> -->
 </div>
 {/if}
