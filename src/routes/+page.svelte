@@ -4,6 +4,7 @@
     import FaGraduationCap from '$lib/icons/fa-graduation-cap.svelte';
     import Sep from '$lib/components/sep.svelte';
     import Exr0nIcon from '$lib/icons/exr0n-icon.svelte';
+    import { setHourlyInterval, setSecondInterval } from './util';
     const GOOGLE_SCHOLAR_LINK = "https://scholar.google.com/citations?hl=en&user=jznRGWcAAAAJ"
     const ICONS = [
         [EnvelopeSolid, "mailto:hi@exr0n.com"],
@@ -15,6 +16,16 @@
         [FaOrcid, "https://orcid.org/0000-0003-1268-4780"],
         [UsersSolid, "/friends"]
     ]
+
+    let recent_time = $state(new Date());
+    let is_night = $derived(recent_time.getHours() >= 23 || recent_time.getHours() < 4);
+    // let is_night = $derived(recent_time.getSeconds() >= 23 || recent_time.getSeconds() < 4);
+    $effect(() => {
+        const alarm23 = setHourlyInterval(23, () => { recent_time = new Date(); });
+        const alarm4  = setHourlyInterval(4, () => { recent_time = new Date(); });
+        // const alarm23 = setSecondInterval(23, () => { console.log("alarm23"); recent_time = new Date(); });
+        // const alarm4  = setSecondInterval(4, () => { console.log("alarm4"); recent_time = new Date(); });
+    })
 
     let show_more = $state(false);
 </script>
@@ -44,7 +55,7 @@
     </div>
 </div>
 <p class='p-4 justify-center text-center'>
-    I work on learning a ton, and on brain machine interfaces. 
+    I work on learning a {#if is_night}f<span class="text-xs">***</span>{/if} ton, and on brain machine interfaces. 
 </p>
 <div class="w-full flex justify-center space-x-2 font-sans">
     <div class="max-w-max relative">
