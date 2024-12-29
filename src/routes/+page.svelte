@@ -48,17 +48,22 @@
 </p>
 <div class="w-full flex justify-center space-x-2 font-sans">
     <div class="max-w-max relative">
-        <a href="/projects">projects</a> <!-- todo: make projects page -->
-        <Sep />
-        <a href={GOOGLE_SCHOLAR_LINK}>publications</a>  <!-- todo: someday make a research interests page -->
-        <Sep />
-        <a onclick={() => { show_more = true; }} role="button">more</a>
+        <a   class="animate -in fill-mode-both fade-in delay-[50ms]" href="/projects">projects</a> <!-- todo: make projects page -->
+        <Sep class="animate -in fill-mode-both fade-in delay-75"/>
+        <a   class="animate -in fill-mode-both fade-in delay-100" href={GOOGLE_SCHOLAR_LINK}>publications</a>  <!-- todo: someday make a research interests page -->
+        <Sep class="animate -in fill-mode-both fade-in" style="transition-delay: 125ms; animation-delay: 125ms;"/>
+        <a   class="animate -in fill-mode-both fade-in delay-150" href="/pictoors">pics</a> 
+        <Sep class="animate -in fill-mode-both fade-in" style="transition-delay: 175ms; animation-delay: 175ms;"/>
+        <a   class="animate -in fill-mode-both fade-in delay-200" href="/writing">words</a> 
+        <Sep class="animate -in fill-mode-both fade-in" style="transition-delay: 225ms; animation-delay: 225ms;"/>
+        <a   class="animate -in fill-mode-both fade-in" style="transition-delay: 250ms; animation-delay: 250ms;" href="/wilderness">more</a>
+        <!-- <a onclick={() => { show_more = true; }} role="button">more</a>
         {#if show_more}
         <div class="absolute flex flex-col right-0 top-6 text-right">
             <a class="animate-in animate-in-from-top-1 fill-mode-both fade-in" href="/pictoors">pictoors</a> 
             <a class="animate-in animate-in-from-top-1 fill-mode-both delay-[50ms] fade-in" href="/writing">writing</a> 
             <a class="animate-in animate-in-from-top-1 fill-mode-both delay-[100ms] fade-in" href="/wilderness">wild</a>
         </div>
-        {/if}
+        {/if} -->
     </div>
 </div>
