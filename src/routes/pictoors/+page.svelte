@@ -1,6 +1,5 @@
 <script>
     import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-    import Pic from './Pic.svelte';
     import metadata from '$lib/pictures/metadata.json';
     import Sep from '$lib/components/sep.svelte';
     import { MapPinAltSolid } from 'flowbite-svelte-icons';
@@ -14,8 +13,8 @@
     let innerWidth = $state(0);
     const breakpoint_lg = 1024;  // px, from tailwind
 
-    let nat_widths = $state({});
-    let nat_heights = $state({});
+    const nat_widths = pics.map(([dflt, meta]) => dflt.img.w);
+    const nat_heights = pics.map(([dflt, meta]) => dflt.img.h);
 
     let open_pic = $state(null);
     let open_meta = $derived(open_pic !== null ? pics[open_pic][1] : null);
@@ -29,27 +28,27 @@
         <Breadcrumbs label="pictoors" />
         {#each pics.map((x, i) => [x, i]).filter(([_, i]) => (innerWidth < breakpoint_lg ? true : i % 2)) as [[path, meta], i]}
         <button onclick={ () => { open_pic = i; } } aria-label="Expand">
-            <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />
+            <enhanced:img src={path} class="object-contain" alt={meta.cap} />
         </button>
         {/each}
     </div>
     <div class={`flex flex-col space-y-${PHOTO_SPACING} hidden lg:block w-1/2`}>
         {#each pics.map((x, i) => [x, i]).filter(([_, i]) => !(i % 2)) as [[path, meta], i]}
         <button onclick={ () => { open_pic = i } } aria-label="Expand">
-            <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />
+            <enhanced:img src={path} class="object-contain" alt={meta.cap} />
         </button>
         {/each}
     </div>
 </div>
 {#if open_pic !== null}
 <div
-    class={`fixed w-full h-full top-0 left-0 p-4 m-0 animate-in backdrop-blur contain-content fade-in fade-out bg-black bg-opacity-80 flex flex-col ${open_is_wide ? "xl" : "sm"}:flex-row items-center justify-center`}
+    class={`fixed w-full h-full top-0 left-0 p-4 m-0 animate-in backdrop-blur object-contain contain-content fade-in fade-out bg-black bg-opacity-80 flex flex-col ${open_is_wide ? "xl" : "sm"}:flex-row items-center justify-center`}
     onclick={() => { open_pic = null; }}
     onkeyup={(ev) => { if (ev.key == 'Escape') open_pic = null; }} 
     role="button"
     tabindex="-1"
 >
-    <img src={pics[open_pic][0]} class="object-contain max-w-full max-h-full shadow-lg" alt={open_meta.cap}/>
+    <enhanced:img src={pics[open_pic][0]} class="object-contain contain-content max-w-full max-h-full shadow-lg" alt={open_meta.cap}/>
     <div class="flex-col ${open_is_wide ? "xl" : "sm"}:flex-col font-sans p-2 self-end min-w-max min-h-max">
         <span class="px-2">{open_meta.cap}</span>
         <span class="px-2 text-sm block ${open_is_wide ? "xl" : "sm"}:block"><MapPinAltSolid class="w-3 inline-block -translate-y-[0.1em]" />&nbsp;{open_meta.loc}</span>
