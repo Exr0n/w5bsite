@@ -7,7 +7,14 @@
     import { formatDate } from '$lib';
     const { data } = $props();
 
-    const pics = data.pics;
+    const tags = ['portrait', 'landscape', 'object', 'silhouette', 'astral']
+    const tag_display = { 'portrait': 'por', 'landscape': 'scape', 'object': 'obj', 'silhouette': 'sil', 'fog': 'fog', 'astral': 'ast' }
+    let tag_filter = $state('portrait');
+
+    const pics = $derived((() => {
+        const g = data.pics;
+        return g.filter(([p, m]) => m.tags.includes(tag_filter))
+    })());
 
     const PHOTO_SPACING = 12
 
@@ -32,7 +39,15 @@
 
 <div class={`flex w-[100vw] space-x-${PHOTO_SPACING} p-${PHOTO_SPACING} sm:px-24 md:px-48 lg:px-72 min-h-[100vh] left-0 top-0 absolute bg-bg`}>
     <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
-        <Breadcrumbs label="pictoors" />
+        <div class="flex flex-col space-y-2">
+            <Breadcrumbs label="pictoors" />
+            <div class="flex justify-center w-full font-sans">
+                {#each tags as tag, i} 
+                    {#if i > 0}<Sep />{/if}
+                    <button onclick={() => tag_filter = tag} class={`hover:text-accent transition-all duration-150 ${tag == tag_filter ? "text-accent" : ""}`}>{tag == tag_filter ? tag : tag_display[tag]}</button>
+                {/each}
+            </div>
+        </div>
         {#each pics.map((x, i) => [x, i]).filter(([_, i]) => (innerWidth < breakpoint_lg ? true : i % 2)) as [[path, meta], i]}
         <button onclick={ () => { open_pic = i; } } aria-label="Expand">
             <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />

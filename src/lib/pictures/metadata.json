@@ -14,13 +14,13 @@
     "IMG_0542.jpeg": {
         "loc": "Black Diamond Mines Regional Preserve",
         "cap": "Friends wandering",
-        "tags": ["portrait"]
+        "tags": ["portrait", "astral"]
     },
     "IMG_0547.jpeg": {
         "loc": "Black Diamond Mines Regional Preserve",
         "cap": "Looking back",
         "time": "2024-11-29T17:50:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "silhouette"]
     },
     "IMG_0617.jpeg": {
         "loc": "Big Horn Mine",
@@ -30,9 +30,9 @@
     },
     "IMG_0782.jpeg": {
         "loc": "Sawyer Camp Trail",
-        "cap": "Rainy night",
+        "cap": "Night walk",
         "time": "2024-12-26T22:42:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "silhouette"]
     },
     "IMG_0803.jpeg": {
         "loc": "Sawyer Camp Trail",
@@ -56,19 +56,19 @@
         "loc": "Pier 55, Seattle, WA",
         "cap": "Red nights",
         "time": "2023-03-26T21:08:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "astral"]
     },
     "IMG_3414.jpeg": {
         "loc": "Stanford, CA",
         "cap": "To fog",
         "time": "2023-12-13T01:23:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "fog"]
     },
     "IMG_4663.jpeg": {
         "loc": "Charlestown, MA",
         "cap": "Digital nomad",
         "time": "2024-07-24T19:36:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "fog"]
     },
     "IMG_5542.jpeg": {
         "loc": "The Nueva School",
@@ -86,11 +86,11 @@
         "loc": "Owens Valley Radio Observatory",
         "cap": "Listen",
         "time": "2024-01-05T22:25:00",
-        "tags": ["object"]
+        "tags": ["object", "astral"]
     },
     "IMG_6208.jpeg": {
         "loc": "Oostzaan, Netherlands",
-        "cap": "Locomotion in flatland",
+        "cap": "Locomotion",
         "time": "2023-05-24T12:12:00",
         "tags": ["landscape"]
     },
@@ -98,7 +98,7 @@
         "loc": "Shells Dirt Jumps, Foster City, CA",
         "cap": "Outside the city",
         "time": "2022-12-26T23:10:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "silhouette"]
     },
     "IMG_9013.jpeg": {
         "loc": "Arches National Park",
@@ -116,12 +116,12 @@
         "loc": "Joshua Tree National Park",
         "cap": "Ascent",
         "time": "2023-10-21T05:30:00",
-        "tags": ["portrait"]
+        "tags": ["portrait", "silhouette", "astral"]
     },
     "IMG_0737.jpeg": {
         "loc": "Joshua Tree National Park",
         "cap": "Joshua tree",
         "time": "2023-10-21T02:02:00",
-        "tags": ["object"]
+        "tags": ["object", "silhouette", "astral"]
     }
 }
