@@ -25,6 +25,7 @@
         const alarm4  = setHourlyInterval(4, () => { recent_time = new Date(); });
         // const alarm23 = setSecondInterval(23, () => { console.log("alarm23"); recent_time = new Date(); });
         // const alarm4  = setSecondInterval(4, () => { console.log("alarm4"); recent_time = new Date(); });
+        return () => { alarm23(); alarm4(); }
     })
 
     let show_more = $state(false);
