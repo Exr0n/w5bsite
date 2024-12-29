@@ -27,6 +27,7 @@
 
 	<div class="prose dark:prose-invert mt-8 pb-36 text-fg">
 		<data.content />
+		<p><Exr0nLink /><Sep type=">" /><a href="/writing" class="no-underline">writing</a> </p>
 	</div>
 </article>
 
