@@ -39,10 +39,10 @@
 <div data-sveltekit-preload-code="eager" class={`w-[100vw] min-h-[100vh] bg-bg absolute left-0 top-0 p-${PHOTO_SPACING} sm:px-24 md:px-${innerWidth < breakpoint_lg ? "36" : "24"} xl:px-72`}>
     <div class={`flex space-x-${PHOTO_SPACING}  `}>
         <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
-    <div class="flex pt-4 space-x-1 items-baseline min-w-max">
+    <div class="flex flex-col sm:flex-row pt-4 space-x-1 items-baseline min-w-max">
         <Breadcrumbs label="pictoors" />
-        <Sep type=">" class="text-xl" />
-        <div class="font-sans text-xl">
+        <div class="font-sans sm:text-xl pt-1 sm:pt-0">
+        <Sep type=">" class="hidden sm:inline-block" />
         {#each tags as tag, i} 
             {#if i > 0}<Sep class="animate-in slide-in-from-left-2 fade-in fill-mode-both" style={`animation-delay: ${50*i}ms; transition-delay: ${50*i}ms;`} />{/if}<a
                 data-sveltekit-preload-data
