@@ -37,6 +37,10 @@
         transition-duration: 100ms !important;
     }
 </style>
+
+<svelte:head>
+	<title>Albert @Exr0n</title>
+</svelte:head>
   
 <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-x-8"> 
     <!-- svelte-ignore a11y_img_redundant_alt -->

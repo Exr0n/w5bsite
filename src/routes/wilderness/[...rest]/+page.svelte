@@ -13,6 +13,10 @@
     }
 </style>
   
+<svelte:head>
+  <title>@Exr0n wilderness</title>
+</svelte:head>
+
 <div class="space-y-2">
   {#if data && data.files}
     <h1 class="font-sans text-2xl"><Exr0nLink />
