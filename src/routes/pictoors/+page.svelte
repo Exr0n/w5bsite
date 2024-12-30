@@ -8,7 +8,7 @@
 
     const tags = ['portrait', 'silhouette', 'landscape', 'object', 'astral']
     const tag_display = { 'portrait': 'por', 'landscape': 'scape', 'object': 'obj', 'silhouette': 'sil', 'fog': 'fog', 'astral': 'ast' }
-    let tag_filter = $state('portrait');
+    let tag_filter = $state(null);
 
     const pics = $derived((() => {
         const g = data.pics;
@@ -44,8 +44,13 @@
         <Sep type=">" class="text-xl" />
         <div class="font-sans text-xl">
         {#each tags as tag, i} 
-            {#if i > 0}<Sep />{/if}
-            <button onclick={() => tag_filter = tag} class={`hover:text-accent transition-all duration-150 ${tag == tag_filter ? "text-accent underline underline-offset-8" : ""}`}>{tag == tag_filter ? tag : tag_display[tag]}</button>
+            {#if i > 0}<Sep class="animate-in slide-in-from-left-2 fade-in fill-mode-both" style={`animation-delay: ${50*i}ms; transition-delay: ${50*i}ms;`} />{/if}<button
+                onclick={() => tag_filter = tag}
+                class={`hover:text-accent transition-all underline
+                        ${tag == tag_filter ? "text-accent underline-offset-8" : "underline-offset-2"}
+                        animate-in slide-in-from-left-2 fade-in fill-mode-both`}
+                style={`animation-delay: ${50*i}ms; transition-delay: ${50*i}ms;`}
+                >{tag_filter === null || tag == tag_filter ? tag : tag_display[tag]}</button>
         {/each}
         </div>
     </div>
