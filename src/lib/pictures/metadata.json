@@ -20,7 +20,7 @@
         "loc": "Black Diamond Mines Regional Preserve",
         "cap": "Looking back",
         "time": "2024-11-29T17:50:00",
-        "tags": ["portrait", "silhouette"]
+        "tags": ["silhouette"]
     },
     "IMG_0617.jpeg": {
         "loc": "Big Horn Mine",
@@ -32,7 +32,7 @@
         "loc": "Sawyer Camp Trail",
         "cap": "Night walk",
         "time": "2024-12-26T22:42:00",
-        "tags": ["portrait", "silhouette"]
+        "tags": ["silhouette"]
     },
     "IMG_0803.jpeg": {
         "loc": "Sawyer Camp Trail",
@@ -56,13 +56,13 @@
         "loc": "Pier 55, Seattle, WA",
         "cap": "Red nights",
         "time": "2023-03-26T21:08:00",
-        "tags": ["portrait", "astral"]
+        "tags": ["astral"]
     },
     "IMG_3414.jpeg": {
         "loc": "Stanford, CA",
         "cap": "To fog",
         "time": "2023-12-13T01:23:00",
-        "tags": ["portrait", "fog"]
+        "tags": ["silhouette", "fog"]
     },
     "IMG_4663.jpeg": {
         "loc": "Charlestown, MA",
@@ -70,7 +70,7 @@
         "time": "2024-07-24T19:36:00",
         "tags": ["portrait", "fog"]
     },
-    "IMG_5542.jpeg": {
+    "IMG_5544.jpeg": {
         "loc": "The Nueva School",
         "cap": "Travel",
         "time": "2023-05-17T13:31:00",
@@ -98,7 +98,7 @@
         "loc": "Shells Dirt Jumps, Foster City, CA",
         "cap": "Outside the city",
         "time": "2022-12-26T23:10:00",
-        "tags": ["portrait", "silhouette"]
+        "tags": ["silhouette"]
     },
     "IMG_9013.jpeg": {
         "loc": "Arches National Park",
@@ -116,7 +116,7 @@
         "loc": "Joshua Tree National Park",
         "cap": "Ascent",
         "time": "2023-10-21T05:30:00",
-        "tags": ["portrait", "silhouette", "astral"]
+        "tags": ["silhouette", "astral"]
     },
     "IMG_0737.jpeg": {
         "loc": "Joshua Tree National Park",

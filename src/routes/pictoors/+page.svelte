@@ -7,7 +7,7 @@
     import { formatDate } from '$lib';
     const { data } = $props();
 
-    const tags = ['portrait', 'landscape', 'object', 'silhouette', 'astral']
+    const tags = ['portrait', 'silhouette', 'landscape', 'object', 'astral']
     const tag_display = { 'portrait': 'por', 'landscape': 'scape', 'object': 'obj', 'silhouette': 'sil', 'fog': 'fog', 'astral': 'ast' }
     let tag_filter = $state('portrait');
 
@@ -37,29 +37,32 @@
 <div class="hidden p-12 space-x-12 space-y-12 sm:flex-row lg:flex-row xl:flex-row"></div>   <!-- force tailwind to compile all needed classes -->
 <svelte:window bind:innerWidth onkeyup={key_handler} />
 
-<div class={`flex w-[100vw] space-x-${PHOTO_SPACING} p-${PHOTO_SPACING} sm:px-24 md:px-48 lg:px-72 min-h-[100vh] left-0 top-0 absolute bg-bg`}>
-    <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
-        <div class="flex flex-col space-y-2">
-            <Breadcrumbs label="pictoors" />
-            <div class="flex justify-center w-full font-sans">
-                {#each tags as tag, i} 
-                    {#if i > 0}<Sep />{/if}
-                    <button onclick={() => tag_filter = tag} class={`hover:text-accent transition-all duration-150 ${tag == tag_filter ? "text-accent" : ""}`}>{tag == tag_filter ? tag : tag_display[tag]}</button>
-                {/each}
-            </div>
+<div class={`w-[100vw] min-h-[100vh] bg-bg absolute left-0 top-0 p-${PHOTO_SPACING} sm:px-24 md:px-${innerWidth < breakpoint_lg ? "36" : "24"} xl:px-72`}>
+    <div class={`flex space-x-${PHOTO_SPACING}  `}>
+        <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
+    <div class="flex pt-4 space-x-1 items-baseline">
+        <Breadcrumbs label="pictoors" />
+        <Sep type=">" class="text-lg" />
+        <div class="font-sans ">
+        {#each tags as tag, i} 
+            {#if i > 0}<Sep />{/if}
+            <button onclick={() => tag_filter = tag} class={`hover:text-accent transition-all duration-150 ${tag == tag_filter ? "text-accent" : ""}`}>{tag == tag_filter ? tag : tag_display[tag]}</button>
+        {/each}
         </div>
-        {#each pics.map((x, i) => [x, i]).filter(([_, i]) => (innerWidth < breakpoint_lg ? true : i % 2)) as [[path, meta], i]}
-        <button onclick={ () => { open_pic = i; } } aria-label="Expand">
-            <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />
-        </button>
-        {/each}
     </div>
-    <div class={`flex flex-col space-y-${PHOTO_SPACING} hidden lg:block w-1/2`}>
-        {#each pics.map((x, i) => [x, i]).filter(([_, i]) => !(i % 2)) as [[path, meta], i]}
-        <button onclick={ () => { open_pic = i } } aria-label="Expand">
-            <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />
-        </button>
-        {/each}
+            {#each pics.map((x, i) => [x, i]).filter(([_, i]) => (innerWidth < breakpoint_lg ? true : i % 2)) as [[path, meta], i]}
+            <button onclick={ () => { open_pic = i; } } aria-label="Expand">
+                <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />
+            </button>
+            {/each}
+        </div>
+        <div class={`flex flex-col space-y-${PHOTO_SPACING} hidden lg:block w-1/2`}>
+            {#each pics.map((x, i) => [x, i]).filter(([_, i]) => !(i % 2)) as [[path, meta], i]}
+            <button onclick={ () => { open_pic = i } } aria-label="Expand">
+                <img src={path} class="object-contain" bind:naturalWidth={nat_widths[i]} bind:naturalHeight={nat_heights[i]} alt={meta.cap} />
+            </button>
+            {/each}
+        </div>
     </div>
 </div>
 {#if open_pic !== null}
