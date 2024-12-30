@@ -74,7 +74,7 @@
     tabindex="-1"
 >
     <img src={pics[open_pic][0]} class="object-contain max-w-full max-h-full shadow-lg" alt={open_meta.cap}/>
-    <div class="flex-col ${open_is_wide ? "xl" : "sm"}:flex-col font-sans p-2 self-end min-w-max min-h-max">
+    <div class="flex-col ${open_is_wide ? "xl" : "sm"}:flex-col font-sans p-2 self-end min-w-max min-h-max hover:cursor-default" onclick={ev => ev.stopPropagation()}>
         <span class="px-2">{open_meta.cap}</span>
         <span class="px-2 text-sm block ${open_is_wide ? "xl" : "sm"}:block"><MapPinAltSolid class="w-3 inline-block -translate-y-[0.1em]" />&nbsp;{open_meta.loc}</span>
         <span class="pl-2 text-sm block  ${open_is_wide ? "xl" : "sm"}:block">{formatDate(new Date(Date.parse(open_meta.time)))}</span>
