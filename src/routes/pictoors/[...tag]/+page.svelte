@@ -6,9 +6,9 @@
     import { formatDate } from '$lib';
     const { data } = $props();
 
-    const tags = ['portrait', 'silhouette', 'landscape', 'object', 'astral']
+    const tags = data.tags;
     const tag_display = { 'portrait': 'por', 'landscape': 'scape', 'object': 'obj', 'silhouette': 'sil', 'fog': 'fog', 'astral': 'ast' }
-    let tag_filter = $state(null);
+    const tag_filter = $derived(data.tag);
 
     const pics = $derived((() => {
         const g = data.pics;
@@ -36,7 +36,7 @@
 <div class="hidden p-12 space-x-12 space-y-12 sm:flex-row lg:flex-row xl:flex-row"></div>   <!-- force tailwind to compile all needed classes -->
 <svelte:window bind:innerWidth onkeyup={key_handler} />
 
-<div class={`w-[100vw] min-h-[100vh] bg-bg absolute left-0 top-0 p-${PHOTO_SPACING} sm:px-24 md:px-${innerWidth < breakpoint_lg ? "36" : "24"} xl:px-72`}>
+<div data-sveltekit-preload-code="eager" class={`w-[100vw] min-h-[100vh] bg-bg absolute left-0 top-0 p-${PHOTO_SPACING} sm:px-24 md:px-${innerWidth < breakpoint_lg ? "36" : "24"} xl:px-72`}>
     <div class={`flex space-x-${PHOTO_SPACING}  `}>
         <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
     <div class="flex pt-4 space-x-1 items-baseline min-w-max">
@@ -44,13 +44,14 @@
         <Sep type=">" class="text-xl" />
         <div class="font-sans text-xl">
         {#each tags as tag, i} 
-            {#if i > 0}<Sep class="animate-in slide-in-from-left-2 fade-in fill-mode-both" style={`animation-delay: ${50*i}ms; transition-delay: ${50*i}ms;`} />{/if}<button
-                onclick={() => tag_filter = tag}
+            {#if i > 0}<Sep class="animate-in slide-in-from-left-2 fade-in fill-mode-both" style={`animation-delay: ${50*i}ms; transition-delay: ${50*i}ms;`} />{/if}<a
+                data-sveltekit-preload-data
+                href={`/pictoors/${tag}`}
                 class={`hover:text-accent transition-all underline
                         ${tag == tag_filter ? "text-accent underline-offset-8" : "underline-offset-2"}
                         animate-in slide-in-from-left-2 fade-in fill-mode-both`}
                 style={`animation-delay: ${50*i}ms; transition-delay: ${50*i}ms;`}
-                >{tag_filter === null || tag == tag_filter ? tag : tag_display[tag]}</button>
+                >{tag_filter === null || tag == tag_filter ? tag : tag_display[tag]}</a>
         {/each}
         </div>
     </div>
