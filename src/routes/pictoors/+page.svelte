@@ -1,6 +1,5 @@
 <script>
     import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-    import Pic from './Pic.svelte';
     import metadata from '$lib/pictures/metadata.json';
     import Sep from '$lib/components/sep.svelte';
     import { MapPinAltSolid } from 'flowbite-svelte-icons';
@@ -40,13 +39,13 @@
 <div class={`w-[100vw] min-h-[100vh] bg-bg absolute left-0 top-0 p-${PHOTO_SPACING} sm:px-24 md:px-${innerWidth < breakpoint_lg ? "36" : "24"} xl:px-72`}>
     <div class={`flex space-x-${PHOTO_SPACING}  `}>
         <div class={`flex flex-col space-y-${PHOTO_SPACING} w-full lg:w-1/2`}>
-    <div class="flex pt-4 space-x-1 items-baseline">
+    <div class="flex pt-4 space-x-1 items-baseline min-w-max">
         <Breadcrumbs label="pictoors" />
-        <Sep type=">" class="text-lg" />
-        <div class="font-sans ">
+        <Sep type=">" class="text-xl" />
+        <div class="font-sans text-xl">
         {#each tags as tag, i} 
             {#if i > 0}<Sep />{/if}
-            <button onclick={() => tag_filter = tag} class={`hover:text-accent transition-all duration-150 ${tag == tag_filter ? "text-accent" : ""}`}>{tag == tag_filter ? tag : tag_display[tag]}</button>
+            <button onclick={() => tag_filter = tag} class={`hover:text-accent transition-all duration-150 ${tag == tag_filter ? "text-accent underline underline-offset-8" : ""}`}>{tag == tag_filter ? tag : tag_display[tag]}</button>
         {/each}
         </div>
     </div>
